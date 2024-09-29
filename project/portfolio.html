@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Hitesh - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(18, 0, 33);
+            color: white;
+
+            font-family: 'poppins', sans-serif;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(43, 18, 62);
+            top: 0;
+            position: fixed;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.85rem;
+        }
+
+        nav ul li a:hover {
+            font-size: 1rem;
+            color: rgb(182, 153, 226)
+        }
+
+        .left {
+            font-size: 1.2rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 90px 0;
+
+        }
+
+        .firstsection>div {
+            width: 30%;
+
+        }
+
+        .leftsection {
+            font-size: 2rem;
+
+        }
+
+        .leftsection .buttons {
+            padding: 47px 0;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background: #5a1a84;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .leftsection .btn:hover{
+            background-color: #3c0858;
+        }
+
+        .rightsection img {
+            width: 85%;
+            margin: 50px 0;
+        }
+
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-grey {
+            color: grey;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 20px 84px;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+        .about{
+            width: 100%;
+            padding: 78px 0px;
+            
+
+        }
+        .about img{
+            height: auto;
+            width: 420px;
+
+        }
+        .aright {
+            width: 550px;
+
+        }
+        .aleft{
+            width: 1130px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .aright h1{
+            color: white;
+            font-size: 80px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+        .aright h5{
+            color: white;
+            font-size: 25px;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+        .aright p{
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+        .aright .btn {
+            padding: 12px;
+            background: #5a1a84;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .aright .btn:hover{
+            background-color: #3c0858;
+        }
+
+        .contact{
+            min-height: 100vh;
+            padding: 50px;
+            text-align: center;
+            margin-top: 20vh;
+        }
+        .container{
+            max-width: 800px;
+            margin: 0 auto;
+
+        }
+        .container h1{
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+            
+        }
+        .contact-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            margin-left: 30vh;
+
+        }
+        .contact-form{
+            text-align: left;
+
+        }
+        .contact-form h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: rgb(170, 107, 228);
+        }
+        .form-group{
+            margin-bottom: 20px;
+
+        }
+        input, textarea{
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background-color: white ;
+            color: black;
+        }
+        input:focus,
+        textarea:focus{
+            outline: none;
+            box-shadow: 0 0 8px #bbb;
+
+        }
+        button{
+            padding: 12px;
+            background: #5a1a84;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover{
+            background-color: #3c0858;
+        }
+        .contact-info{
+            text-align: left;
+        }
+        .contact-info h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: rgb(170, 107, 228);
+            margin-top: 0.85vh;
+        }
+        .contact-info p{
+            margin-bottom: 10px;
+            
+        }
+        .contact-info i{
+            margin-right: 10px;
+            color: rgb(170, 107, 228) ;
+            
+        }
+        @media screen and(max-width: 768px){
+            .container{
+                padding: 20px;
+
+            }
+            .contact-wrapper{
+                grid-template-columns: 1fr;
+            }
+            
+        }
+        .contact hr{
+            margin: 50px 170px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Hitesh's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#About Us">About Us</a></li>
+                    <li><a href="#work experience">Work Experience</a></li>
+
+                    <li><a href="#Contact Us">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="firstsection">
+            <div class="leftsection"><br><br>
+                Hi, My name is <span class="purple">Hitesh</span>
+
+                <div>and I am a </div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn" onclick="location.href='https://github.com/hiteshsharma0001'">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightsection"><br>
+                <img src="Web-PNG.png" alt="" class="src">
+
+        </section>
+        <hr>
+        <br><br>
+        <section class="about" id="About Us"><br><br>
+            <div class="aleft">
+             <img src="about-png.jpg" alt="" class="src">
+         <div class="aright">
+             <h1>About Us</h1>
+             <h5>Developer <span class="purple">& Designer</span></h5>
+             <p>I am a Full Stack Web Developer. I provide clean code and pixel perfect design. I also make the website more and more interactive. And
+             I am also a Graphic Designer and Photo Editor. </p>
+             <button class="btn">Let's Talk</button>
+             
+         </div>
+             
+            </div>
+         </section>
+         
+        <section class="secondsection" id="work experience"><br><br><br><br><br><br>
+            <span class="textgrey">What I Have Done So Far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="html.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer-(2022-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis at odio accusamus
+                        eveniet, quidem perferendis vero assumenda expedita repellat, adipisci, consequatur sunt.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="css.png" alt="">
+                    <div class="vertical-title">
+                        CSS Developer-(2022-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis at odio accusamus
+                        eveniet, quidem perferendis vero assumenda expedita repellat, adipisci, consequatur sunt.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="graphic-designer.png" alt="">
+                    <div class="vertical-title">
+                        Graphic Designer-(2020-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis at odio accusamus
+                        eveniet, quidem perferendis vero assumenda expedita repellat, adipisci, consequatur sunt.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="photo-editor.png" alt="">
+                    <div class="vertical-title">
+                        Photo Editor-(2015-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis at odio accusamus
+                        eveniet, quidem perferendis vero assumenda expedita repellat, adipisci, consequatur sunt.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="contact" id="Contact Us"><br><br><br><br>
+            <div class="contailner">
+                <h1>CONTACT ME</h1>
+                <div class="contact-wrapper">
+                    <div class="contact-form">
+                        <h3>Send me a message</h3>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-phone"></i>91 7803064830</p>
+                        <p><i class="fas fa-envelope"></i>hitesh992653@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i>Navkar apartment, Ratlam, India</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+        
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Photo Editor'],
+            typeSpeed: 50,
+        });
+    </script>
+
+
+</body>
+
+</html>
